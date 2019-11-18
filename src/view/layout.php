@@ -18,6 +18,7 @@
       <header><h1>Todos - <?php echo $title; ?></h1></header>
       <?php echo $content;?>
     </main>
-    <script src="script.js"></script>
+    <?php /* NEW */ ?>
+    <?php echo $js; ?>
   </body>
 </html>
