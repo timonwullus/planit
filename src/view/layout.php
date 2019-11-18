@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Gift'it</title>
-</head>
-<body>
-  <div class="container">
-    <?php echo $content; ?>
-  </div>
-</body>
-<script type="text/javascript" scr="js/script.js"></script>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><?php echo $title; ?></title>
+  </head>
+  <body>
+    <main>
+      <?php
+        if(!empty($_SESSION['error'])) {
+          echo '<div class="error box">' . $_SESSION['error'] . '</div>';
+        }
+        if(!empty($_SESSION['info'])) {
+          echo '<div class="info box">' . $_SESSION['info'] . '</div>';
+        }
+      ?>
+      <header><h1>Todos - <?php echo $title; ?></h1></header>
+      <?php echo $content;?>
+    </main>
+    <script src="http://localhost:8080/script.js"></script>
+  </body>
 </html>
