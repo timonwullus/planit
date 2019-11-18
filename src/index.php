@@ -1,19 +1,34 @@
 <?php
-session_start();
 ini_set('display_errors', true);
 error_reporting(E_ALL);
 
 $routes = array(
   'home' => array(
-    'controller' => 'Todos',
+    'controller' => 'Pages',
     'action' => 'index'
+  ),
+  'form' => array(
+    'controller' => 'Pages',
+    'action' => 'form'
+  ),
+  'list' => array(
+    'controller' => 'List',
+    'action' => 'list'
+  ),
+  'detail' => array(
+    'controller' => 'List',
+    'action' => 'detail'
+  ),
+  'planner' => array(
+    'controller' => 'List',
+    'action' => 'planner'
   )
 );
 
-if(empty($_GET['page'])) {
+if (empty($_GET['page'])) {
   $_GET['page'] = 'home';
 }
-if(empty($routes[$_GET['page']])) {
+if (empty($routes[$_GET['page']])) {
   header('Location: index.php');
   exit();
 }

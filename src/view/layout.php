@@ -8,7 +8,9 @@
   <title>Gift'it</title>
 </head>
 <body>
-
+  <div class="container">
+    <?php echo $content; ?>
+  </div>
 </body>
 <script type="text/javascript" scr="js/script.js"></script>
 </html>
