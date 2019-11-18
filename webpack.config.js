@@ -73,7 +73,7 @@ module.exports = (env, {mode}) => {
       //   filename: './index.html'
       // }),
       new MiniCssExtractPlugin({
-        filename: 'style.[contenthash].css'
+        filename: 'style.css'
       }),
       new OptimizeCSSAssetsPlugin(),
       new webpack.HotModuleReplacementPlugin()
