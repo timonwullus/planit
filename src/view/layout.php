@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Todos - <?php echo $title; ?></title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main>
@@ -17,6 +18,6 @@
       <header><h1>Todos - <?php echo $title; ?></h1></header>
       <?php echo $content;?>
     </main>
-    <script src="http://localhost:8080/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
