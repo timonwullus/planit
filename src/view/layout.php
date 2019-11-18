@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Todos - <?php echo $title; ?></title>
-    <link rel="stylesheet" href="style.css">
+    <?php /* NEW */ ?>
+    <?php echo $css;?>
   </head>
   <body>
     <main>

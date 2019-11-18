@@ -4,11 +4,9 @@ class Controller {
 
   public $route;
   protected $viewVars = array();
-  // NEW
   protected $env = 'development';
 
   public function filter() {
-    // NEW
     if (basename(dirname(dirname(__FILE__))) != 'src') {
       $this->env = 'production';
     }
@@ -16,11 +14,13 @@ class Controller {
   }
 
   public function render() {
-    // NEW
     // set js variable according to environment (development / production)
     $this->set('js', '<script src="http://localhost:8080/script.js"></script>'); // webpack dev server
+    // NEW : CSS
+    $this->set('css', ''); // webpack dev server: css is injected by the script
     if ($this->env == 'production') {
       $this->set('js', '<script src="script.js"></script>'); // regular script
+      $this->set('css', '<link href="style.css" rel="stylesheet">'); // regular css tag
     }
     $this->createViewVarWithContent();
     $this->renderInLayout();
