@@ -28,9 +28,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --mode development",
-    "prod": "rm -rf dist/ && webpack --mode production",
-    "copydist": "rsync -a --exclude=*.css --exclude=*.js ./src/ ./dist",
-    "clean": "rm -rf ./dist"
+    "prod": "rm -rf dist/ && webpack --mode production"
   },
   "browserslist": [
     "last 2 versions",
