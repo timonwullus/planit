@@ -12,6 +12,14 @@ class PagesController extends Controller {
     $this->set('currentPage', 'home');
   }
 
+  public function form() {
+    // $truckDAO = new TruckDAO();
+    // $trucks = $truckDAO->selectAll();
+    // $this->set('trucks', $trucks);
+    $this->set('title', 'Form');
+    $this->set('currentPage', 'form');
+  }
+
   // public function detail() {
   //   $this->set('title', 'Detail');
   //   $this->set('currentPage', 'detail');
