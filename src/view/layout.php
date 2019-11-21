@@ -7,7 +7,7 @@
     <?php echo $css;?>
   </head>
   <body>
-    <main>
+    <div class="container">
       <?php
         if(!empty($_SESSION['error'])) {
           echo '<div class="error box">' . $_SESSION['error'] . '</div>';
@@ -16,9 +16,9 @@
           echo '<div class="info box">' . $_SESSION['info'] . '</div>';
         }
       ?>
-      <header><h1>Todos - <?php echo $title; ?></h1></header>
+
       <?php echo $content;?>
-    </main>
+    </div>
     <?php /* NEW */ ?>
     <?php echo $js; ?>
   </body>
