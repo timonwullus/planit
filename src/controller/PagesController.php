@@ -20,8 +20,6 @@ class PagesController extends Controller {
     $this->set('currentPage', 'form');
   }
 
-  // public function detail() {
-  //   $this->set('title', 'Detail');
-  //   $this->set('currentPage', 'detail');
-  // }
+  
+
 }
