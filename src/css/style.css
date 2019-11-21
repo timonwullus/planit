@@ -1,6 +1,11 @@
-/* *, *::before, *::after {
+/* stylelint-disable */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-} */
+}
+/* stylelint-enable */
 
 html {
   box-sizing: inherit;
@@ -147,7 +152,7 @@ body {
   height: 20rem;
   border-radius: 2.7rem 2.7rem 0 0;
   background-color: rgb(88, 210, 210);
-  background-image: url(../assets/img/content_bg.svg);
+  background-image: url(/assets/img/content_bg.svg);
   background-repeat: no-repeat;
   background-position: 0 2rem;
 }

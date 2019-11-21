@@ -8,7 +8,7 @@
                     Weet je niet waar je het best kan kopen?<br>
                     Ga dan naar onze Cadeau planner!</p>
 
-                <a class="home__btn" href="form.html">
+                <a class="home__btn" href="index.php?page=form">
                     plan it!
                 </a>
             </div>
