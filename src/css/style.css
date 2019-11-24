@@ -14,19 +14,19 @@ html {
 
 @font-face {
   font-family: Gilroy, sans-serif;
-  src: url(/assets/fonts/Gilroy-Light.otf) format('otf');
+  src: url(/assets/fonts/Gilroy/Gilroy-Light.otf) format('otf');
   font-weight: 400;
 }
 
 @font-face {
   font-family: Gilroy, sans-serif;
-  src: url(/assets/fonts/Gilroy-ExtraBold.otf) format('otf');
+  src: url(/assets/fonts/Gilroy/Gilroy-ExtraBold.otf) format('otf');
   font-weight: 600;
 }
 
 @font-face {
   font-family: Product-Sans, sans-serif;
-  src: url(/assets/fonts/ProductSans-Regular.ttf) format('ttf');
+  src: url(/assets/fonts/product-sans/ProductSans-Regular.ttf) format('ttf');
   font-weight: 400;
 }
 
