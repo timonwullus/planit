@@ -14,37 +14,19 @@ html {
 
 @font-face {
   font-family: Gilroy, sans-serif;
-  src: url(../assets/fonts/Gilroy/Gilroy-Light.woff2) format('woff2');
+  src: url(/assets/fonts/Gilroy/Gilroy-Light.woff2) format('woff2'), url(/assets/fonts/Gilroy/Gilroy-Light.woff) format('woff');
   font-weight: 400;
 }
 
 @font-face {
   font-family: Gilroy, sans-serif;
-  src: url(../assets/fonts/Gilroy/Gilroy-Light.woff) format('woff');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Gilroy, sans-serif;
-  src: url(../assets/fonts/Gilroy/Gilroy-ExtraBold.woff2) format('woff2');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: Gilroy, sans-serif;
-  src: url(../assets/fonts/Gilroy/Gilroy-ExtraBold.woff) format('woff');
+  src: url(/assets/fonts/Gilroy/Gilroy-ExtraBold.woff2) format('woff2'), url(/assets/fonts/Gilroy/Gilroy-ExtraBold.woff) format('woff');
   font-weight: 600;
 }
 
 @font-face {
   font-family: Product-Sans, sans-serif;
-  src: url(../assets/fonts/product-sans/ProductSans-Regular.woff2) format('woff2');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Product-Sans, sans-serif;
-  src: url(../assets/fonts/product-sans/ProductSans-Regular.woff) format('woff');
+  src: url(/assets/fonts/product-sans/ProductSans-Regular.woff2) format('woff2'), url(/assets/fonts/product-sans/ProductSans-Regular.woff) format('woff');
   font-weight: 400;
 }
 
