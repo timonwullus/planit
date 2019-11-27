@@ -21,5 +21,6 @@
     </div>
     <?php /* NEW */ ?>
     <?php echo $js; ?>
+    <script src="js/validate.js"></script>
   </body>
 </html>
