@@ -12,7 +12,16 @@
                 <h3 class="hidden">Lijst cadeaus</h3>
                 <div class="list--container">
                     <ul class="list__list">
+                      <?php foreach ($products as $product): ?>
                         <li class="list__list--item">
+                            <a href="detail.html" class="list--name">
+                                <?php echo $product['name']; ?>
+                                <span class="list--date">2/12</span>
+                                <img src="img/checked.svg" alt="checked">
+                            </a>
+                        </li>
+                      <?php endforeach; ?>
+                        <!-- <li class="list__list--item">
                             <a href="detail.html" class="list--name">
                                 PlayStation 4
                                 <span class="list--date">2/12</span>
@@ -34,7 +43,7 @@
                                 <span class="list--date">24/12</span>
                                 <img src="img/checked.svg" alt="checked">
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </section>
