@@ -1,7 +1,7 @@
 <?php
   require_once( __DIR__ . '/DAO.php');
 
-  class ProductsDAO extends DAO {
+  class ProductDAO extends DAO {
     public function selectProducts(){
       $sql = "SELECT * FROM `products`";
       $stmt = $this->pdo->prepare($sql);
