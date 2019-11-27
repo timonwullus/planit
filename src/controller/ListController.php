@@ -1,29 +1,22 @@
 <?php
 
 require_once __DIR__ . '/Controller.php';
+require_once __DIR__ . '/../dao/ProductsDAO.php';
 
-class ListController extends Controller {
-  public function detail() {
-    // $truckDAO = new TruckDAO();
-    // $trucks = $truckDAO->selectAll();
-    // $this->set('trucks', $trucks);
-    $this->set('title', 'Detail');
-    $this->set('currentPage', 'detail');
+class ProductsContoller extends Controller {
+  private $productDAO;
+
+  public function  __construct() {
+    $this->productDAO = new ProductDAO();
   }
 
-  public function planner() {
-    // $truckDAO = new TruckDAO();
-    // $trucks = $truckDAO->selectAll();
-    // $this->set('trucks', $trucks);
-    $this->set('title', 'Planner');
-    $this->set('currentPage', 'planner');
+  public function index() {
+    $this->set('products',$this->productDAO->selectProducts());
   }
 
-  public function list() {
-    // $truckDAO = new TruckDAO();
-    // $trucks = $truckDAO->selectAll();
-    // $this->set('trucks', $trucks);
-    $this->set('title', 'List');
-    $this->set('currentPage', 'list');
+  public function list(){
+    // $this->set('products',$this->productDAO->selectProducts());
+    $products = $productDAO->selectProducts();
+    $this->set('products', $products);
   }
 }
