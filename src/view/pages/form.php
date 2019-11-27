@@ -11,7 +11,7 @@
                     <form action="" class="form">
                             <label for="category" class="form--label">Categorie Cadeau</label>
                             <p class="error"></p>
-                            <select name="category" id="category" class="form--input">
+                            <select name="category" id="category" class="form--input" required>
                                     <option value="">--Kies een categroie--</option>
                                     <option value="technology">Technologie</option>
                                     <option value="toys">Kleren</option>
@@ -19,7 +19,7 @@
 
                             <label for="kind" class="form--label">Welk cadeau?</label>
                             <p class="error"></p>
-                            <select name="kind" id="kind" class="form--input">
+                            <select name="kind" id="kind" class="form--input" required>
                                     <option value="">--Kies een cadeau--</option>
                                     <option value="playstation">PlayStation 4</option>
                                     <option value="wii">Wii</option>
@@ -30,7 +30,7 @@
                             <input type="date" id="date" name="trip-start"
                                 value="2019-12-25"
                                 min="2019-01-01" max="2019-12-31"
-                                class="form--input">
+                                class="form--input" required>
 
                             <input type="submit" value="plan it!" class="form--btn">
                     </form>
