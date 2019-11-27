@@ -10,6 +10,7 @@
                 <div class="form--container">
                     <form action="" class="form">
                             <label for="category" class="form--label">Categorie Cadeau</label>
+                            <p class="error"></p>
                             <select name="category" id="category" class="form--input">
                                     <option value="">--Kies een categroie--</option>
                                     <option value="technology">Technologie</option>
@@ -17,6 +18,7 @@
                             </select>
 
                             <label for="kind" class="form--label">Welk cadeau?</label>
+                            <p class="error"></p>
                             <select name="kind" id="kind" class="form--input">
                                     <option value="">--Kies een cadeau--</option>
                                     <option value="playstation">PlayStation 4</option>
@@ -24,6 +26,7 @@
                             </select>
 
                             <label for="date" class="form--label">Tegen welke datum?</label>
+                            <p class="error"></p>
                             <input type="date" id="date" name="trip-start"
                                 value="2019-12-25"
                                 min="2019-01-01" max="2019-12-31"
