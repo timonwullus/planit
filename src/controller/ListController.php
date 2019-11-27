@@ -15,10 +15,10 @@ class ListController extends Controller {
   // }
 
   public function list(){
-    // $this->set('products',$this->productDAO->selectProducts());
-    $products = $productDAO->selectProducts();
+    $this->set('products',$this->productDAO->selectProducts());
+    // $products = $productDAO->selectProducts();
 
-    $this->set('products', $products);
+    // $this->set('products', $products);
     $this->set('title', 'List');
     $this->set('currentPage', 'list');
   }
