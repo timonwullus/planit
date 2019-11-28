@@ -20,6 +20,4 @@ class PagesController extends Controller {
     $this->set('currentPage', 'form');
   }
 
-  
-
 }
