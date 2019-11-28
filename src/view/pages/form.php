@@ -8,7 +8,7 @@
             <section class="form">
                 <h3 class="hidden">Formulier</h3>
                 <div class="form--container">
-                    <form action="" class="form">
+                    <form action="index.php?page=detail" class="form">
                             <label for="category" class="form--label">Categorie Cadeau</label>
                             <p class="error"></p>
                             <select name="category" id="category" class="form--input" required>
