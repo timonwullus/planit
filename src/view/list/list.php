@@ -1,11 +1,11 @@
 <header class="content__header">
-            <a href="index.html" class="header--link">
+            <a href="index.php?page=home" class="header--link">
                 <h2 class="content__title">Gift<span class="content--apos">'</span>it</h2>
             </a>
         </header>
 
         <main class="content__content">
-            <a href="form.html" class="content__back"> <img src="assets/img/arrow.svg" alt="arrow" class="back--arrow">
+            <a href="index.php?page=form" class="content__back"> <img src="assets/img/arrow.svg" alt="arrow" class="back--arrow">
                 Terug</a>
 
             <section class="list">

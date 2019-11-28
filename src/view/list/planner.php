@@ -1,5 +1,5 @@
 <header class="content__header">
-            <a href="index.html" class="header--link">
+            <a href="index.php?page=home" class="header--link">
                 <h2 class="content__title">Gift<span class="content--apos">'</span>it</h2>
             </a>
         </header>
