@@ -10,6 +10,13 @@ class Controller {
     if (basename(dirname(dirname(__FILE__))) != 'src') {
       $this->env = 'production';
     }
+
+    setlocale(LC_ALL, 'nl_BE');
+
+    if (!isset($_SESSION['present'])) {
+      $_SESSION['present'] = array();
+    }
+
     call_user_func(array($this, $this->route['action']));
   }
 
@@ -47,6 +54,12 @@ class Controller {
   private function renderInLayout() {
     extract($this->viewVars, EXTR_OVERWRITE);
     include __DIR__ . '/../view/layout.php';
+    if (!empty($_SESSION['info'])) {
+      unset($_SESSION['info']);
+    }
+    if (!empty($_SESSION['error'])) {
+      unset($_SESSION['error']);
+    }
   }
 
 }

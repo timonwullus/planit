@@ -10,18 +10,9 @@ class ListController extends Controller {
     $this->productDAO = new ProductDAO();
   }
 
-  // public function index() {
-  //   $this->set('products',$this->productDAO->selectProducts());
-  // }
-
   public function list(){
     $this->set('products',$this->productDAO->selectProducts());
-    // $products = $productDAO->selectProducts();
-
-    // $this->set('products', $products);
     $this->set('title', 'List');
     $this->set('currentPage', 'list');
   }
 }
-
-//hallo

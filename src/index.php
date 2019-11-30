@@ -11,16 +11,20 @@ $routes = array(
     'controller' => 'Pages',
     'action' => 'form'
   ),
+  'nextform' => array(
+    'controller' => 'Pages',
+    'action' => 'nextform'
+  ),
   'list' => array(
     'controller' => 'List',
     'action' => 'list'
   ),
   'detail' => array(
-    'controller' => 'List',
+    'controller' => 'Pages',
     'action' => 'detail'
   ),
   'planner' => array(
-    'controller' => 'List',
+    'controller' => 'Pages',
     'action' => 'planner'
   )
 );

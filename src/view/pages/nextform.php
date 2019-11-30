@@ -5,18 +5,41 @@
 </header>
 
 <main class="content__content">
-  <section class="form">
-    <h3 class="hidden">Formulier</h3>
-    <div class="form--container">
-        <ul>
-          <?php foreach ($categories as $category): ?>
-            <li><a href="index.php?page=nextform&amp;id=<?php echo $category['id'] ?>"><?php echo $category['name'] ?></a></li>
-          <?php endforeach; ?>
-        </ul>
-    </div>
-</section>
+    <section class="form">
+        <h3 class="hidden">Formulier</h3>
+        <div class="form--container">
+        <form method="post" action="index.php?page=detail">
+          <input type="hidden" name="action" value="insertData" />
+          <div>
+            <label for="inputKind">kind:</label>
+            <input type="text" id="inputKind" name="product" value="<?php
+            if (!empty($_POST['product'])) {
+              echo $_POST['product'];
+            }
+            ?>" />
 
-<section class="preview">
+            <label for="inputDate">date:</label>
+            <input type="date" id="inputDate" name="date" value="<?php
+            if (!empty($_POST['date'])) {
+              echo $_POST['date'];
+            }
+            ?>" />
+
+            <label for="inputRegion">region:</label>
+            <input type="text" id="inputRegion" name="region" value="<?php
+            if (!empty($_POST['region'])) {
+              echo $_POST['region'];
+            }
+            ?>" />
+          </div>
+          <div>
+            <button type="submit">Add Todo</button>
+          </div>
+        </form>
+        </div>
+    </section>
+
+<!-- <section class="preview">
   <h3 class="hidden">Preview eerste cadeaus</h3>
   <div class="preview--container">
       <ul class="preview__list">
@@ -48,5 +71,5 @@
         </li>
       </ul>
     </div>
-  </section>
+  </section> -->
 </main>

@@ -75,7 +75,7 @@ body {
 }
 
 .home--apos {
-  color: rgb(88, 210, 210);
+  color: rgb(215, 90, 90);
 }
 
 .home__image {
@@ -91,7 +91,7 @@ body {
   align-items: center;
   flex-flow: column;
   height: 31.2rem;
-  background-color: rgb(88, 210, 210);
+  background-color: rgb(215, 90, 90);
   border-radius: 0 0 2.7rem 2.7rem;
 }
 
@@ -137,7 +137,7 @@ body {
 }
 
 .home__btn:hover {
-  color: rgb(88, 210, 210);
+  color: rgb(215, 90, 90);
   background-color: white;
 }
 
@@ -149,9 +149,9 @@ body {
 /* GLOBAL CONTENT LAYOUT */
 
 .content__header {
-  height: 20rem;
+  height: 15rem;
   border-radius: 2.7rem 2.7rem 0 0;
-  background-color: rgb(88, 210, 210);
+  background-color: rgb(215, 90, 90);
   background-image: url(../assets/img/content_bg.svg);
   background-repeat: no-repeat;
   background-position: 0 2rem;
@@ -174,10 +174,15 @@ body {
 }
 
 .content__content {
-  height: 53.7rem;
+  height: 58.7rem;
   display: flex;
   align-items: center;
   flex-flow: column;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .content__back {
@@ -201,13 +206,12 @@ body {
 /* FORM */
 
 .form {
-  margin-top: 1rem;
-  width: 25.3rem;
+  margin-top: 2rem;
+  width: 28.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
-
 }
 
 .form--label {
@@ -215,12 +219,11 @@ body {
   text-align: left;
   font-size: 1.7rem;
   color: rgb(58, 58, 58);
-  padding-bottom: .5rem;
   width: 100%;
 }
 
 .form--input {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: Product-Sans, sans-serif;
   color: #646464;
   width: 100%;
@@ -228,8 +231,8 @@ body {
   border-radius: .5rem;
   background-color: rgb(234, 234, 234);
   border: none;
-  margin-bottom: 3rem;
-  padding: .5rem 1rem;
+  margin-bottom: 2rem;
+  padding: .1rem 1rem;
 }
 
 .form--btn {
@@ -241,14 +244,14 @@ body {
   padding: 1rem 3.5rem;
   border: .1rem solid white;
   border-radius: 2.7rem;
-  background-color: rgb(88, 210, 210);
+  background-color: rgb(215, 90, 90);
   cursor: pointer;
 }
 
 .form--btn:hover {
-  color: rgb(88, 210, 210);
+  color: rgb(215, 90, 90);
   background-color: white;
-  border-color: rgb(88, 210, 210);
+  border-color: rgb(215, 90, 90);
 }
 
 .form--btn:active {
@@ -289,6 +292,10 @@ body {
 }
 
 /* TIMER */
+
+.detail {
+  margin-top: 5rem;
+}
 
 .detail__timer {
   height: 10.6rem;
@@ -333,7 +340,7 @@ body {
 .detail__title {
   font-size: 2.35rem;
   font-weight: 600;
-  color: rgb(88, 210, 210);
+  color: rgb(215, 90, 90);
 }
 
 .detail__date {
@@ -374,7 +381,7 @@ body {
 }
 
 .store__link--active {
-  border: .2rem solid rgb(88, 210, 210);
+  border: .2rem solid rgb(215, 90, 90);
 }
 
 .store--details {
@@ -452,14 +459,14 @@ body {
   display: block;
   border: .1rem solid white;
   border-radius: 2.7rem;
-  background-color: rgb(88, 210, 210);
+  background-color: rgb(215, 90, 90);
   cursor: pointer;
 }
 
 .planner__btn:hover {
-  color: rgb(88, 210, 210);
+  color: rgb(215, 90, 90);
   background-color: white;
-  border-color: rgb(88, 210, 210);
+  border-color: rgb(215, 90, 90);
 }
 
 .planner__btn:active {
