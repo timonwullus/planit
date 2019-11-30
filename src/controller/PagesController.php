@@ -44,12 +44,10 @@ class PagesController extends Controller {
     $this->set('products',$this->productDAO->selectProductsByCategory($_GET['id']));
     $this->set('holidays',$this->holidayDAO->selectHolidays());
     $this->set('regions',$this->regionDAO->selectRegions());
+    $complete = $this->completeDAO->selectAll();
     $this->set('title', 'Welk cadeau');
     $this->set('currentPage', 'nextform');
-
-    $complete = $this->completeDAO->selectAll();
     $this->set('complete', $complete);
-    $this->set('title', 'Overview');
   }
 
   public function detail(){

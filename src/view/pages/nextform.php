@@ -8,25 +8,25 @@
     <section class="form">
         <h3 class="hidden">Formulier</h3>
         <div class="form--container">
-        <form method="post" action="index.php?page=detail">
+        <form method="post" action="index.php?page=nextform">
           <input type="hidden" name="action" value="insertData" />
           <div>
-            <label for="inputKind">kind:</label>
-            <input type="text" id="inputKind" name="product" value="<?php
+            <label for="product">kind:</label>
+            <input type="text" id="product" name="product" value="<?php
             if (!empty($_POST['product'])) {
               echo $_POST['product'];
             }
             ?>" />
 
-            <label for="inputDate">date:</label>
-            <input type="date" id="inputDate" name="date" value="<?php
+            <label for="date">date:</label>
+            <input type="date" id="date" name="date" value="<?php
             if (!empty($_POST['date'])) {
               echo $_POST['date'];
             }
             ?>" />
 
-            <label for="inputRegion">region:</label>
-            <input type="text" id="inputRegion" name="region" value="<?php
+            <label for="region">region:</label>
+            <input type="text" id="region" name="region" value="<?php
             if (!empty($_POST['region'])) {
               echo $_POST['region'];
             }

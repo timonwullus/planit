@@ -26,9 +26,10 @@ class CompleteDAO extends DAO {
       $stmt->bindValue(':product', $data['product']);
       $stmt->bindValue(':date', $data['date']);
       $stmt->bindValue(':region', $data['region']);
-      if ($stmt->execute()) {
-        return $this->selectById($this->pdo->lastInsertId());
-      }
+      $stmt->execute();
+      // if ($stmt->execute()) {
+      //   return $this->selectById($this->pdo->lastInsertId());
+      // }
 
   }
 
