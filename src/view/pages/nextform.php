@@ -44,10 +44,10 @@
     <h3 class="hidden">Preview eerste cadeaus</h3>
     <div class="preview--container">
       <ul class="preview__list">
-        <?php foreach ($products as $product): ?>
+        <?php foreach ($complete as $complete): ?>
           <li class="preview__list--item">
-              <a href="index.php?page=detail&amp;id=<?php echo $product['id'] ?>" class="preview__link">
-                  <span class="preview--name"><?php echo $product['name'] ?></span>
+              <a href="index.php?page=detail&amp;id=<?php echo $complete['id'] ?>" class="preview__link">
+                  <span class="preview--name"><?php echo $complete['name'] ?></span>
                   <span class="preview--date">2/12</span>
               </a>
           </li>

@@ -22,9 +22,9 @@ class CompleteDAO extends DAO {
   public function insert($data) {
     $errors = $this->validate( $data );
     if (empty($errors)) {
-      $sql = "INSERT INTO `complete` (`name`, `date`, `region_id`) VALUES (:name, :date, :region)";
+      $sql = "INSERT INTO `complete` (`product_id`, `date`, `region_id`) VALUES (:product, :date, :region)";
       $stmt = $this->pdo->prepare($sql);
-      $stmt->bindValue(':name', $data['name']);
+      $stmt->bindValue(':product', $data['product']);
       $stmt->bindValue(':date', $data['date']);
       $stmt->bindValue(':region', $data['region']);
       // $stmt->execute();
@@ -37,11 +37,21 @@ class CompleteDAO extends DAO {
 
   public function selectProductByProductId(){
     $sql = "SELECT * FROM `complete`
-            INNER JOIN `products`
-            ON `complete`.`product_id` = `products`.`id`";
+    INNER JOIN `products` ON `complete`.`product_id` = `products`.`id`";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
+  public function selectStoresByCategory(){
+    $sql = "SELECT * FROM `complete`
+            INNER JOIN `products`
+            ON `complete`.`product_id` = `products`.`id`
+            INNER JOIN `stores`
+            ON `products`.`category_id` = `stores`.`category_id`";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
   public function validate( $data ){

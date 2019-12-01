@@ -48,8 +48,9 @@ class PagesController extends Controller {
         if (!$insertCompleteResult) {
           $errors = $this->completeDAO->validate($data);
           $this->set('errors', $errors);
-        } else {
-          header('Location: index.php?page=detail&id=' . $complete['product_id']);
+        }
+        else {
+          header('Location: index.php?page=detail');
           exit();
         }
       }
