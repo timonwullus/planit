@@ -10,7 +10,7 @@
     <div class="form--container">
         <ul>
           <?php foreach ($categories as $category): ?>
-            <li><a href="index.php?page=nextform&amp;id=<?php echo $category['id'] ?>"><?php echo $category['name'] ?></a></li>
+            <li class="category__item"><a class="category__link" href="index.php?page=nextform&amp;id=<?php echo $category['id'] ?>"><?php echo $category['name'] ?></a></li>
           <?php endforeach; ?>
         </ul>
     </div>

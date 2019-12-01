@@ -206,6 +206,20 @@ body {
 
 /* FORM */
 
+.category__link {
+  color: var(--main--grey--color);
+  text-decoration: none;
+  font-size: var(--biggerText--fontsize);
+  line-height: 3rem;
+  font-family: Product-Sans, sans-serif;
+  text-transform: capitalize;
+  transition: border-bottom .2s ease-in;
+}
+
+.category__link:hover {
+  border-bottom: .2rem solid var(--main--red--color);
+}
+
 .form {
   margin-top: 2rem;
   width: 28.3rem;
@@ -292,6 +306,10 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
+}
+
+.preview__dots:hover {
+  color: var(--main--red--color);
 }
 
 /* TIMER */
