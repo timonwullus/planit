@@ -22,9 +22,9 @@ class CompleteDAO extends DAO {
   public function insert($data) {
     $errors = $this->validate( $data );
     if (empty($errors)) {
-      $sql = "INSERT INTO `complete` (`product_id`, `date`, `region_id`) VALUES (:product, :date, :region)";
+      $sql = "INSERT INTO `complete` (`name`, `date`, `region_id`) VALUES (:name, :date, :region)";
       $stmt = $this->pdo->prepare($sql);
-      $stmt->bindValue(':product', $data['product']);
+      $stmt->bindValue(':name', $data['name']);
       $stmt->bindValue(':date', $data['date']);
       $stmt->bindValue(':region', $data['region']);
       // $stmt->execute();
