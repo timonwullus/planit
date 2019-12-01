@@ -16,6 +16,7 @@
             <?php foreach($products as $product): ?>
               <option name="product" value="<?php echo $product['id']?>"><?php echo $product['name'] ?></option>
             <?php endforeach; ?>
+            <p class="error"></p>
           </select>
 
           <label class="form--label" for="date" min="<?php echo $currentDate; ?>">date:</label>
@@ -23,13 +24,14 @@
           if (!empty($_POST['date'])) {
             echo $_POST['date'];
           }
-          ?>" />
+          ?>" /><p class="error"></p>
 
           <label class="form--label" for="region">region:</label>
           <select class="form--input" name="region" id="region">
             <?php foreach($regions as $region): ?>
               <option name="region" value="<?php echo $region['id']?>"><?php echo ucfirst($region['name']) ?></option>
             <?php endforeach; ?>
+            <p class="error"></p>
           </select>
         </div>
         <div>
