@@ -234,6 +234,7 @@ body {
   background-color: var(--form--grey--color);
   border: none;
   margin-bottom: 2rem;
+  margin-top: .7rem;
   padding: .1rem 1rem;
 }
 

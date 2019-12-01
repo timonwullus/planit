@@ -8,24 +8,25 @@
   <section class="form">
       <h3 class="hidden">Formulier</h3>
       <div class="form--container">
-      <form method="post" action="index.php?page=nextform">
+      <form method="post" action="index.php?page=nextform" class="form">
         <input type="hidden" name="action" value="insertData" />
         <div>
-          <label for="product">kind:</label>
-          <select name="product" id="product">
+          <label class="form--label" for="product">kind:</label>
+          <select class="form--input" name="product" id="product">
             <?php foreach($products as $product): ?>
               <option name="product" value="<?php echo $product['id']?>"><?php echo $product['name'] ?></option>
             <?php endforeach; ?>
           </select>
-          <label for="date" min="<?php echo $currentDate; ?>">date:</label>
-          <input type="date" id="date" name="date" value="<?php
+
+          <label class="form--label" for="date" min="<?php echo $currentDate; ?>">date:</label>
+          <input class="form--input" type="date" id="date" name="date" value="<?php
           if (!empty($_POST['date'])) {
             echo $_POST['date'];
           }
           ?>" />
 
-          <label for="region">region:</label>
-          <select name="region" id="region">
+          <label class="form--label" for="region">region:</label>
+          <select class="form--input" name="region" id="region">
             <?php foreach($regions as $region): ?>
               <option name="region" value="<?php echo $region['id']?>"><?php echo ucfirst($region['name']) ?></option>
             <?php endforeach; ?>
@@ -33,7 +34,7 @@
         </div>
         <div>
           <a href="index.php?page=detail">
-          <button type="submit">Add Todo</button>
+          <button class="form--btn" type="submit">Add Todo</button>
           </a>
         </div>
       </form>
