@@ -14,7 +14,7 @@
                     <ul class="list__list">
                       <?php foreach ($products as $product): ?>
                         <li class="list__list--item">
-                            <a href="detail.html" class="list--name">
+                            <a href="index.php?page=detail" class="list--name">
                                 <?php echo $product['name']; ?>
                                 <span class="list--date">2/12</span>
                                 <img src="img/checked.svg" alt="checked">

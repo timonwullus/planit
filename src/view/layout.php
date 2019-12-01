@@ -5,6 +5,9 @@
     <title>Todos - <?php echo $title; ?></title>
     <?php /* NEW */ ?>
     <?php echo $css;?>
+    <meta 	name="viewport"
+		content="initial-scale=1.0,
+				  width=device-width" />
   </head>
   <body>
     <div class="container">
