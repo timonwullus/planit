@@ -224,6 +224,10 @@ body {
   font-size: var(--smallerText--fontsize);
 }
 
+.list__list {
+  padding: 3rem;
+}
+
 .list--date {
   color: var(--main--darkgrey--color);
   font-family: Gilroy, sans-serif;

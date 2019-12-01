@@ -9,6 +9,10 @@
   .content__header {
     background-image: url(../assets/img/content_bg_700.svg);
   }
+
+  .list__list {
+    padding: 4rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -30,6 +34,10 @@
 
   .content__header {
     background-image: url(../assets/img/content_bg_500.svg);
+  }
+
+  .list__list {
+    padding: 4rem;
   }
 }
 
@@ -53,5 +61,14 @@
 
   .content__header {
     background-image: url(../assets/img/content_bg.svg);
+  }
+
+  .category__link--list {
+    font-size: 1.2rem;
+  }
+
+  .list__list {
+    text-align: center;
+    padding: 4.5rem;
   }
 }
