@@ -1,0 +1,9 @@
+:root {
+  --main--red--color: rgb(215, 90, 90);
+  --body--color: rgb(240, 240, 240);
+  --main--grey--color: rgb(58, 58, 58);
+  --main--white--color: white;
+  --homebtn--color: rgba(255, 255, 255, .65);
+  --form--grey--color: rgb(234, 234, 234);
+  --main--darkgrey--color: #646464;
+}

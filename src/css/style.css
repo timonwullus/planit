@@ -40,9 +40,9 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Gilroy, sans-serif;
-  color: rgb(58, 58, 58);
+  color: var(--main--grey--color);
 
-  background-color: rgb(240, 240, 240);
+  background-color: var(--body--color);
 }
 
 .hidden {
@@ -52,9 +52,9 @@ body {
 .container {
   width: 40.6rem;
   height: 75.7rem;
-  border: .12rem solid rgb(58, 58, 58);
+  border: .12rem solid var(--main--grey--color);
   border-radius: 2.7rem;
-  background-color: white;
+  background-color: var(--main--white--color);
 }
 
 /* HOME */
@@ -75,7 +75,7 @@ body {
 }
 
 .home--apos {
-  color: rgb(215, 90, 90);
+  color: var(--main--red--color);
 }
 
 .home__image {
@@ -91,7 +91,7 @@ body {
   align-items: center;
   flex-flow: column;
   height: 31.2rem;
-  background-color: rgb(215, 90, 90);
+  background-color: var(--main--red--color);
   border-radius: 0 0 2.7rem 2.7rem;
 }
 
@@ -104,7 +104,7 @@ body {
   right: -10%;
   top: -7rem;
   border-radius: 50%;
-  background: white;
+  background: var(--main--white--color);
 }
 
 .home--container {
@@ -127,18 +127,18 @@ body {
   font-family: Gilroy, sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: white;
+  color: var(--main--white--color);
   text-decoration: none;
   padding: 1rem 3.5rem;
-  border: .3rem solid white;
+  border: .3rem solid var(--main--white--color);
   border-radius: 2.7rem;
   background: none;
   cursor: pointer;
 }
 
 .home__btn:hover {
-  color: rgb(215, 90, 90);
-  background-color: white;
+  color: var(--main--red--color);
+  background-color: var(--main--white--color);
 }
 
 .home__btn:active {
@@ -151,7 +151,7 @@ body {
 .content__header {
   height: 15rem;
   border-radius: 2.7rem 2.7rem 0 0;
-  background-color: rgb(215, 90, 90);
+  background-color: var(--main--red--color);
   background-image: url(../assets/img/content_bg.svg);
   background-repeat: no-repeat;
   background-position: 0 2rem;
@@ -159,7 +159,7 @@ body {
 
 .header--link {
   text-decoration: none;
-  color: rgb(58, 58, 58);
+  color: var(--main--grey--color);
   display: inline-block;
   margin: 3rem;
 }
@@ -170,7 +170,7 @@ body {
 }
 
 .content--apos {
-  color: white;
+  color: var(--main--white--color);
 }
 
 .content__content {
@@ -188,7 +188,7 @@ body {
 .content__back {
   font-family: Product-Sans, sans-serif;
   font-size: 1.3rem;
-  color: rgb(58, 58, 58);
+  color: var(--main--grey--color);
   text-decoration: none;
   margin-left: 3rem;
   margin-top: -5rem;
@@ -219,7 +219,7 @@ body {
   font-family: Product-Sans, sans-serif;
   text-align: left;
   font-size: 1.7rem;
-  color: rgb(58, 58, 58);
+  color: var(--main--grey--color);
   width: 100%;
 }
 
@@ -240,25 +240,25 @@ body {
   font-family: Gilroy, sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: white;
+  color: var(--main--white--color);
   text-decoration: none;
   padding: 1rem 3.5rem;
-  border: .1rem solid white;
+  border: .1rem solid var(--main--white--color);
   border-radius: 2.7rem;
-  background-color: rgb(215, 90, 90);
+  background-color: var(--main--red--color);
   cursor: pointer;
 }
 
 .form--btn:hover {
-  color: rgb(215, 90, 90);
-  background-color: white;
-  border-color: rgb(215, 90, 90);
+  color: var(--main--red--color);
+  background-color: var(--main--white--color);
+  border-color: var(--main--red--color);
 }
 
 .form--btn:active {
   background-color: rgb(234, 234, 234);
   border-color: rgb(234, 234, 234);
-  color: white;
+  color: var(--main--white--color);
 }
 
 .preview {
@@ -341,7 +341,7 @@ body {
 .detail__title {
   font-size: 2.35rem;
   font-weight: 600;
-  color: rgb(215, 90, 90);
+  color: var(--main--red--color);
 }
 
 .detail__date {
@@ -382,7 +382,7 @@ body {
 }
 
 .store__link--active {
-  border: .2rem solid rgb(215, 90, 90);
+  border: .2rem solid var(--main--red--color);
 }
 
 .store--image {
@@ -391,13 +391,13 @@ body {
 
 .store--details {
   height: 5.5rem;
-  color: rgb(58, 58, 58);
+  color: var(--main--grey--color);
 }
 
 .store--name {
   font-size: 1.6rem;
   font-weight: 600;
-  color: rgb(58, 58, 58);
+  color: var(--main--grey--color);
   text-decoration: none;
 }
 
@@ -408,7 +408,7 @@ body {
 .store--price {
   height: 5.5rem;
   font-size: 1.6rem;
-  color: rgb(58, 58, 58);
+  color: var(--main--grey--color);
 }
 
 /* PLANNER */
@@ -457,27 +457,27 @@ body {
   font-family: Gilroy, sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: white;
+  color: var(--main--white--color);
   text-decoration: none;
   padding: 1rem 2rem;
   margin: 0 auto;
   display: block;
-  border: .1rem solid white;
+  border: .1rem solid var(--main--white--color);
   border-radius: 2.7rem;
-  background-color: rgb(215, 90, 90);
+  background-color: var(--main--red--color);
   cursor: pointer;
 }
 
 .planner__btn:hover {
-  color: rgb(215, 90, 90);
-  background-color: white;
-  border-color: rgb(215, 90, 90);
+  color: var(--main--red--color);
+  background-color: var(--main--white--color);
+  border-color: var(--main--red--color);
 }
 
 .planner__btn:active {
   background-color: rgb(234, 234, 234);
   border-color: rgb(234, 234, 234);
-  color: white;
+  color: var(--main--white--color);
 }
 
 /* error */
