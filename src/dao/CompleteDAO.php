@@ -5,7 +5,7 @@ require_once( __DIR__ . '/DAO.php');
 class CompleteDAO extends DAO {
 
   public function selectAll(){
-    $sql = "SELECT * FROM `complete`";
+    $sql = "SELECT * FROM `complete` LIMIT 3";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -20,17 +20,41 @@ class CompleteDAO extends DAO {
   }
 
   public function insert($data) {
-
-      $sql = "INSERT INTO `complete` (`product`, `date`, `region`) VALUES (:product, :date, :region)";
+    $errors = $this->validate( $data );
+    if (empty($errors)) {
+      $sql = "INSERT INTO `complete` (`product_id`, `date`, `region_id`) VALUES (:product, :date, :region)";
       $stmt = $this->pdo->prepare($sql);
       $stmt->bindValue(':product', $data['product']);
       $stmt->bindValue(':date', $data['date']);
       $stmt->bindValue(':region', $data['region']);
-      $stmt->execute();
-      // if ($stmt->execute()) {
-      //   return $this->selectById($this->pdo->lastInsertId());
-      // }
-
+      // $stmt->execute();
+      if ($stmt->execute()) {
+        return $this->selectById($this->pdo->lastInsertId());
+      }
+    }
+    return false;
   }
 
+  public function selectProductByProductId(){
+    $sql = "SELECT * FROM `complete`
+            INNER JOIN `products`
+            ON `complete`.`product_id` = `products`.`id`";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function validate( $data ){
+    $errors = [];
+    if (!isset($data['product'])) {
+      $errors['product'] = 'Gelieve product te kiezen';
+    }
+    if (!isset($data['date'])) {
+      $errors['date'] = 'Gelieve een datum te kiezen';
+    }
+    if (!isset($data['region'])) {
+      $errors['region'] = 'Gelieve een regio te kiezen';
+    }
+    return $errors;
+  }
 }

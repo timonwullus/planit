@@ -14,37 +14,24 @@
           <?php endforeach; ?>
         </ul>
     </div>
-</section>
+  </section>
 
 <section class="preview">
   <h3 class="hidden">Preview eerste cadeaus</h3>
   <div class="preview--container">
       <ul class="preview__list">
-        <li class="preview__list--item">
-            <a href="index.php?page=detail" class="preview__link">
-                <span class="preview--name">PlayStation 4</span>
-                <span class="preview--date">2/12</span>
-            </a>
-        </li>
-
-        <li class="preview__list--item">
-            <a href="detail.html" class="preview__link">
-                <span class="preview--name">Wii</span>
-                <span class="preview--date">9/12</span>
-            </a>
-        </li>
-
-        <li class="preview__list--item">
-            <a href="detail.html" class="preview__link">
-                <span class="preview--name">Xbox One</span>
-                <span class="preview--date">24/12</span>
-            </a>
-        </li>
-
+        <?php foreach ($complete as $complete): ?>
+          <li class="preview__list--item">
+              <a href="index.php?page=detail&amp;id=<?php echo $complete['id'] ?>" class="preview__link">
+                  <span class="preview--name"><?php echo $complete['product_id'] ?></span>
+                  <span class="preview--date">2/12</span>
+              </a>
+          </li>
+        <?php endforeach; ?>
         <li>
-            <a href="index.php?page=list" class="preview__dots">
-                <img src="assets/img/dots.svg" alt="dots">
-            </a>
+          <a href="index.php?page=list" class="preview__dots">
+            <img src="assets/img/dots.svg" alt="dots">
+          </a>
         </li>
       </ul>
     </div>
