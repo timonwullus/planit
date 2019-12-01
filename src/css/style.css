@@ -213,11 +213,28 @@ body {
   line-height: 3rem;
   font-family: Product-Sans, sans-serif;
   text-transform: capitalize;
-  transition: border-bottom .2s ease-in;
+  /* transition: border-bottom .2s ease-in; */
 }
 
 .category__link:hover {
   border-bottom: .2rem solid var(--main--red--color);
+}
+
+.category__link--list {
+  font-size: var(--smallerText--fontsize);
+}
+
+.list--date {
+  color: var(--main--darkgrey--color);
+  font-family: Gilroy, sans-serif;
+  font-weight: 600;
+}
+
+.list__list {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
 }
 
 .form {
