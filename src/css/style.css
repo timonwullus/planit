@@ -230,13 +230,6 @@ body {
   font-weight: 600;
 }
 
-.list__list {
-  padding: 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 3rem;
-}
-
 .form {
   margin-top: 2rem;
   width: 28.3rem;
