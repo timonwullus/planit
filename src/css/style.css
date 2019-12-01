@@ -69,7 +69,7 @@ body {
 }
 
 .title {
-  font-size: 7.5rem;
+  font-size: var(--title--fontsize);
   font-weight: 600;
   text-align: center;
 }
@@ -118,14 +118,14 @@ body {
 
 .home__text {
   font-family: Product-Sans, sans-serif;
-  font-size: 1.4rem;
+  font-size: var(--text--fontsize);
   text-align: center;
   line-height: 1.8rem;
 }
 
 .home__btn {
   font-family: Gilroy, sans-serif;
-  font-size: 1.4rem;
+  font-size: var(--text--fontsize);
   font-weight: 600;
   color: var(--main--white--color);
   text-decoration: none;
@@ -187,7 +187,7 @@ body {
 
 .content__back {
   font-family: Product-Sans, sans-serif;
-  font-size: 1.3rem;
+  font-size: var(--smallerText--fontsize);
   color: var(--main--grey--color);
   text-decoration: none;
   margin-left: 3rem;
@@ -218,13 +218,13 @@ body {
 .form--label {
   font-family: Product-Sans, sans-serif;
   text-align: left;
-  font-size: 1.7rem;
+  font-size: var(--biggerText--fontsize);
   color: var(--main--grey--color);
   width: 100%;
 }
 
 .form--input {
-  font-size: 1.3rem;
+  font-size: var(--smallerText--fontsize);
   font-family: Product-Sans, sans-serif;
   color: var(--main--darkgrey--color);
   width: 100%;
@@ -238,7 +238,7 @@ body {
 
 .form--btn {
   font-family: Gilroy, sans-serif;
-  font-size: 1.4rem;
+  font-size: var(--text--fontsize);
   font-weight: 600;
   color: var(--main--white--color);
   text-decoration: none;
@@ -276,13 +276,13 @@ body {
 }
 
 .preview--name {
-  font-size: 2rem;
+  font-size: var(--preview--fontsize);
   font-weight: 600;
   color: var(--main--darkgrey--color);
 }
 
 .preview--date {
-  font-size: 2rem;
+  font-size: var(--preview--fontsize);
   color: var(--main--darkgrey--color);
 }
 
@@ -329,7 +329,7 @@ body {
 }
 
 .timer--text {
-  font-size: 1.6rem;
+  font-size: var(--store--fontsize);
   color: var(--main--darkgrey--color);
 }
 
@@ -346,7 +346,7 @@ body {
 
 .detail__date {
   font-family: Product-Sans, sans-serif;
-  font-size: 1.8rem;
+  font-size: var(--biggerText--fontsize);
   color: var(--main--darkgrey--color);
   letter-spacing: .05rem;
   padding-top: .6rem;
@@ -360,7 +360,7 @@ body {
 }
 
 .stores__title {
-  font-size: 1.8rem;
+  font-size: var(--biggerText--fontsize);
   font-weight: 600;
   color: var(--main--darkgrey--color);
   margin-bottom: 1rem;
@@ -395,7 +395,7 @@ body {
 }
 
 .store--name {
-  font-size: 1.6rem;
+  font-size: var(--store--fontsize);
   font-weight: 600;
   color: var(--main--grey--color);
   text-decoration: none;
@@ -407,7 +407,7 @@ body {
 
 .store--price {
   height: 5.5rem;
-  font-size: 1.6rem;
+  font-size: var(--store--fontsize);
   color: var(--main--grey--color);
 }
 
@@ -439,7 +439,7 @@ body {
 }
 
 .planner--text {
-  font-size: 1.7rem;
+  font-size: var(--biggerText--fontsize);
   font-weight: 600;
   display: block;
   padding-bottom: .8rem;
@@ -455,7 +455,7 @@ body {
 
 .planner__btn {
   font-family: Gilroy, sans-serif;
-  font-size: 1.4rem;
+  font-size: var(--text--fontsize);
   font-weight: 600;
   color: var(--main--white--color);
   text-decoration: none;
@@ -485,7 +485,7 @@ body {
 .error {
   color: red;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: var(--smallerText--fontsize);
   text-transform: lowercase;
   padding-bottom: 1rem;
 }
