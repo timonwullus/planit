@@ -71,4 +71,22 @@
     text-align: center;
     padding: 4.5rem;
   }
+
+  .category__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+  }
+
+  .preview {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 7rem;
+  }
+
+  .category__link {
+    font-size: var(--smallerText--fontsize);
+    padding: .5rem;
+  }
 }

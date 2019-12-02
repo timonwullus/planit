@@ -309,6 +309,7 @@ body {
 .preview {
   width: 34.6rem;
   margin-top: 7rem;
+  padding-bottom: 3rem;
 }
 
 .preview__link {
