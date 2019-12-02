@@ -14,7 +14,7 @@
           <label class="form--label" for="product_id">Kies een cadeau</label>
           <select class="form--input" name="product_id" id="product_id">
             <?php foreach($products as $product): ?>
-              <option name="product_id" value="<?php echo $product['id']?>"><?php echo $product['name'] ?></option>
+              <option name="product_id" value="<?php echo $product['product_id']?>"><?php echo $product['name'] ?></option>
             <?php endforeach; ?>
         </select>
             <!-- <p class="error"></p> -->
@@ -29,7 +29,7 @@
           <label class="form--label" for="region_id">In welke regio zoek het cadeau?</label>
           <select class="form--input" name="region_id" id="region_id">
             <?php foreach($regions as $region): ?>
-              <option name="region_id" value="<?php echo $region['id']?>"><?php echo strtoupper ($region['name']) ?></option>
+              <option name="region_id" value="<?php echo $region['region_id']?>"><?php echo strtoupper ($region['name']) ?></option>
             <?php endforeach; ?>
           </select>
         </div>

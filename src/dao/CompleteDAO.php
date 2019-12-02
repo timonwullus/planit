@@ -36,7 +36,7 @@ class CompleteDAO extends DAO {
 
   public function selectAllProducts($limit){
     $sql = "SELECT * FROM `complete`
-    INNER JOIN `products` ON `complete`.`product_id` = `products`.`id` ORDER BY `date` ASC LIMIT :limit";
+    INNER JOIN `products` ON `complete`.`product_id` = `products`.`product_id` ORDER BY `date` ASC LIMIT :limit";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':limit', $limit);
     $stmt->execute();
@@ -45,7 +45,7 @@ class CompleteDAO extends DAO {
 
   public function selectProductByProductId($id){
     $sql = "SELECT * FROM `complete`
-    INNER JOIN `products` ON `complete`.`product_id` = `products`.`id` WHERE `complete`.`id` = :id";
+    INNER JOIN `products` ON `complete`.`product_id` = `products`.`product_id` WHERE `complete`.`id` = :id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->execute();
@@ -55,15 +55,15 @@ class CompleteDAO extends DAO {
   public function selectStoresByCategory($id){
     $sql = "SELECT * FROM `complete`
             INNER JOIN `products`
-            ON `complete`.`product_id` = `products`.`id`
+            ON `complete`.`product_id` = `products`.`product_id`
             INNER JOIN `regions`
-            ON `complete`.`region_id` = `regions`.`id`
+            ON `complete`.`region_id` = `regions`.`region_id`
             RIGHT JOIN `stores`
             ON `products`.`category_id` = `stores`.`category_id`
-            AND `regions`.`id` = `stores`.`region_id`
+            AND `regions`.`region_id` = `stores`.`region_id`
             INNER JOIN `prices`
-            ON `products`.`id` = `prices`.`product_id`
-            AND `stores`.`id` = `prices`.`store_id`
+            ON `products`.`product_id` = `prices`.`product_id`
+            AND `stores`.`store_id` = `prices`.`store_id`
             WHERE `complete`.`id` = :id
             ORDER BY `prices`.`price` ASC";
     $stmt = $this->pdo->prepare($sql);
@@ -72,8 +72,13 @@ class CompleteDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function selectPriceByStore($id){
-
+  public function selectCompleteByProduct($product_id){
+    $sql = "SELECT * FROM `complete`
+    INNER JOIN `products` ON `complete`.`product_id` = `products`.`product_id` WHERE `products`.`product_id` = :product_id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':product_id', $product_id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
   // public function validate( $data ){

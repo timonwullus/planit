@@ -45,7 +45,9 @@ class PagesController extends Controller {
           'region_id' => $_POST['region_id']
         );
         $insertData = $this->completeDAO->insert($data);
-        header('Location: index.php?page=detail' . $complete['id']);
+        header('Location: index.php?page=detail&id=' . $link['id']);
+        $this->set('link',$this->completeDAO->selectCompleteByProduct($_POST['id']));;
+
       //   if (!$insertCompleteResult) {
       //     $errors = $this->completeDAO->validate($data);
       //     $this->set('errors', $errors);
