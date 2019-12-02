@@ -8,35 +8,34 @@
   <section class="form">
       <h3 class="hidden">Formulier</h3>
       <div class="form--container">
-      <form method="post" action="index.php?page=nextform" class="form">
+      <form method="post" action="index.php?page=nextform&id=1" class="form">
         <input type="hidden" name="action" value="insertData" />
         <div>
-          <label class="form--label" for="product">kind:</label>
-          <select class="form--input" name="product" id="product">
+          <label class="form--label" for="product_id">Kies een cadeau</label>
+          <select class="form--input" name="product_id" id="product_id">
             <?php foreach($products as $product): ?>
-              <option name="product" value="<?php echo $product['id']?>"><?php echo $product['name'] ?></option>
+              <option name="product_id" value="<?php echo $product['id']?>"><?php echo $product['name'] ?></option>
             <?php endforeach; ?>
-            <p class="error"></p>
-          </select>
+        </select>
+            <!-- <p class="error"></p> -->
 
-          <label class="form--label" for="date" min="<?php echo $currentDate; ?>">date:</label>
+          <label class="form--label" for="date" min="<?php echo $currentDate; ?>">Wanneer wil je het afgeven?</label>
           <input class="form--input" type="date" id="date" name="date" value="<?php
           if (!empty($_POST['date'])) {
             echo $_POST['date'];
           }
           ?>" /><p class="error"></p>
 
-          <label class="form--label" for="region">region:</label>
-          <select class="form--input" name="region" id="region">
+          <label class="form--label" for="region_id">In welke regio zoek het cadeau?</label>
+          <select class="form--input" name="region_id" id="region_id">
             <?php foreach($regions as $region): ?>
-              <option name="region" value="<?php echo $region['id']?>"><?php echo ucfirst($region['name']) ?></option>
+              <option name="region_id" value="<?php echo $region['id']?>"><?php echo strtoupper ($region['name']) ?></option>
             <?php endforeach; ?>
-            <p class="error"></p>
           </select>
         </div>
         <div>
           <a href="index.php?page=detail">
-          <button class="form--btn" type="submit">Add Todo</button>
+          <button class="form--btn" type="submit">Voeg toe</button>
           </a>
         </div>
       </form>
@@ -51,7 +50,11 @@
           <li class="preview__list--item">
               <a href="index.php?page=detail&amp;id=<?php echo $complete['id'] ?>" class="preview__link">
                   <span class="preview--name"><?php echo $complete['name'] ?></span>
-                  <span class="preview--date">2/12</span>
+                  <span class="preview--date"><?php
+          $date = strtotime($complete['date']);
+          $remaining = $date - time();
+          $days_remaining = floor($remaining / 86400);
+          echo $days_remaining?> d.</span>
               </a>
           </li>
         <?php endforeach; ?>

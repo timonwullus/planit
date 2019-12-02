@@ -206,18 +206,33 @@ body {
 
 /* FORM */
 
+.category__list {
+  display: grid;
+  grid-template-columns: 20rem 20rem;
+  grid-gap: 1.5rem;
+}
+
 .category__link {
   color: var(--main--grey--color);
   text-decoration: none;
+  font-weight: bold;
   font-size: var(--biggerText--fontsize);
   line-height: 3rem;
   font-family: Product-Sans, sans-serif;
   text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: .15rem solid var(--main--red--color);
+  border-radius: 1rem;
   /* transition: border-bottom .2s ease-in; */
 }
 
 .category__link:hover {
-  border-bottom: .2rem solid var(--main--red--color);
+  /* border-bottom: .2rem solid var(--main--red--color); */
+  background-color: var(--main--red--color);
+  color: var(--main--white--color);
 }
 
 .category__link--list {

@@ -22,9 +22,9 @@ class PagesController extends Controller {
   }
 
   public function form() {
-    $complete = $this->completeDAO->selectAll();
-    $this->set('complete', $complete);
     $this->set('categories',$this->categoryDAO->selectCategories());
+    $complete = $this->completeDAO->selectAllProducts(3);
+    $this->set('complete', $complete);
     $this->set('title', 'Type cadeau');
     $this->set('currentPage', 'form');
   }
@@ -40,19 +40,20 @@ class PagesController extends Controller {
     if (!empty($_POST['action'])) {
       if ($_POST['action'] == 'insertData') {
         $data = array(
-          'product' => $_POST['product'],
+          'product_id' => $_POST['product_id'],
           'date' => $_POST['date'],
-          'region' => $_POST['region']
+          'region_id' => $_POST['region_id']
         );
-        $insertCompleteResult = $this->completeDAO->insert($data);
-        if (!$insertCompleteResult) {
-          $errors = $this->completeDAO->validate($data);
-          $this->set('errors', $errors);
-        }
-        else {
-          header('Location: index.php?page=detail');
-          exit();
-        }
+        $insertData = $this->completeDAO->insert($data);
+        header('Location: index.php?page=detail' . $complete['id']);
+      //   if (!$insertCompleteResult) {
+      //     $errors = $this->completeDAO->validate($data);
+      //     $this->set('errors', $errors);
+      //   }
+      //   else {
+      //     header('Location: index.php?page=detail');
+      //     exit();
+      //   }
       }
     }
 
@@ -60,7 +61,8 @@ class PagesController extends Controller {
     $this->set('currentDate', $currentDate);
     $this->set('products',$this->productDAO->selectProductsByCategory($_GET['id']));
     $this->set('regions',$this->regionDAO->selectRegions());
-    $complete = $this->completeDAO->selectAll();
+    $this->set('complete',$this->completeDAO->selectAll());
+    $complete = $this->completeDAO->selectAllProducts(3);
     $this->set('title', 'Welk cadeau');
     $this->set('currentPage', 'nextform');
     $this->set('complete', $complete);
@@ -70,9 +72,12 @@ class PagesController extends Controller {
     if (isset($_GET['id'])) {
       $complete = $this->completeDAO->selectById($_GET['id']);
       $this->set('complete', $complete);
+      $product = $this->completeDAO->selectProductByProductId($_GET['id']);
+      $this->set('product', $product);
+      $stores = $this->completeDAO->selectStoresByCategory($_GET['id']);
+      $this->set('stores', $stores);
     }
 
-    $this->set('product',$this->completeDAO->selectProductByProductId());
     $this->set('title', 'Detail');
     $this->set('currentPage', 'detail');
   }

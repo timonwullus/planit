@@ -12,12 +12,15 @@
                 <h3 class="hidden">Lijst cadeaus</h3>
                 <div class="list--container">
                     <ul class="list__list">
-                      <?php foreach ($products as $product): ?>
+                      <?php foreach ($complete as $complete): ?>
                         <li class="list__list--item">
-                            <a class="category__link category__link--list" href="index.php?page=detail" class="list--name">
-                                <span class="list--date">2/12</span>
-                                <?php echo $product['name']; ?>
-                                <img src="assets/img/checked.svg" alt="checked">
+                            <a class="category__link category__link--list" href="index.php?page=detail&id=<?php echo $complete['id']?>" class="list--name">
+                                <span class="list--date">nog <?php
+                                  $date = strtotime($complete['date']);
+                                  $remaining = $date - time();
+                                  $days_remaining = floor($remaining / 86400);
+                                  echo $days_remaining?> dagen</span>
+                                <?php echo $complete['name']; ?>
                             </a>
                         </li>
                       <?php endforeach; ?>

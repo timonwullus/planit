@@ -19,7 +19,7 @@
           <p class="timer--text">dagen</p>
       </div>
       <div class="detail__text">
-          <h5 class="detail__title"><?php echo $complete['name'] ?></h5>
+          <h5 class="detail__title"><?php echo $product['name'] ?></h5>
           <p class="detail__date"><?php echo $complete['date'] ?></p>
 
       </div>
@@ -32,13 +32,13 @@
       <?php foreach($stores as $store): ?>
         <li class="store">
             <a href="index.php?page=planner" class="store__link store__link--active">
-                <img src="assets/img/coolblue.jpg" alt="coolblue" class="store--image">
+                <img src="assets/img/<?php echo strtolower ($store['name'])?>.jpg" alt="coolblue" class="store--image">
                 <div class="store--details">
                     <p class="store--name"><?php echo $store['name'] ?></p>
-                    <p class="store--street">Antwerpsesteenweg693</p>
-                    <p class="store--location">9040 Gent</p>
+                    <p class="store--street"><?php echo $store['address'] ?></p>
+                    <p class="store--location"><?php echo $store['zip'] ?> <?php echo $store['town'] ?></p>
                 </div>
-                <p class="store--price">333,99 EUR</p>
+                <p class="store--price"><?php echo $store['price'] ?> EUR</p>
             </a>
         </li>
       <?php endforeach; ?>
